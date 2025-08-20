@@ -1,0 +1,17 @@
+[flake8]
+max-line-length = 100
+extend-ignore = E203, W503   # compatibility with Black if you ever use it
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    build,
+    dist,
+    semantic_pb2.py,  # generated gRPC code
+    logs,
+    reports
+per-file-ignores =
+    securecomms.py:E402
+    semdev_send.py:E402
+    semdev_recv.py:E402
+
