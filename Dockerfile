@@ -1,22 +1,32 @@
 FROM python:3.11-slim
 
-WORKDIR /app
+ENV PIP_NO_CACHE_DIR=1 \
+    DEBIAN_FRONTEND=noninteractive
 
-# Build tools + protoc for zfec/protobuf
+# OS deps needed for building wheels & for matplotlib / cryptography / zfec
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
+    build-essential gcc g++ make \
     protobuf-compiler \
+    libffi-dev libssl-dev \
+    libfreetype6-dev libpng-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Python deps
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
 
-# App code
+# First copy only requirements for better layer caching
+COPY requirements.txt requirements-dev.txt ./
+
+# Upgrade pip tooling; then install runtime + (optionally) dev deps
+RUN python -m pip install --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir -r requirements.txt \
+    && pip install --no-cache-dir -r requirements-dev.txt
+
+# Now copy the source code
 COPY . .
 
-# Compile proto at build time
+# Generate protobufs
 RUN python -m grpc_tools.protoc -I proto --python_out=. proto/semantic.proto
 
-CMD ["python", "securecomms.py", "--help"]
+# Default (can be overridden by docker run/compose)
+CMD ["python","-u","securecomms.py","--help"]
 
