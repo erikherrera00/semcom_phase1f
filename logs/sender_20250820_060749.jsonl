@@ -1,0 +1,3 @@
+{"event":"start_sender","bind":9000,"peer":9001,"profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"ts":1755670069.187623}
+{"event":"ecdh_hello_send","ts":1755670069.1896484}
+{"event":"ecdh_hello_retry","attempt":1,"ts":1755670069.8018537}

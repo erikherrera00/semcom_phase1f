@@ -1,0 +1,40 @@
+syntax = "proto3";
+package semcom;
+
+message Command {
+  string name = 1;              // e.g., "REBOOT", "MOVE"
+  map<string,string> params = 2; // e.g., {"lat":"37.78","lon":"-122.4"}
+  uint64 deadline_ms = 3;        // optional deadline
+}
+
+message Status {
+  string system = 1;             // e.g., "uav-12"
+  uint32 health = 2;             // 0..100
+  map<string,string> metrics = 3; // e.g., {"cpu":"47","temp":"61C"}
+}
+
+message Alert {
+  string level = 1;             // CRITICAL | WARNING | INFO
+  string source = 2;            // e.g., "sensor-3"
+  string detail = 3;            // human-readable
+}
+
+message Ack {
+  uint64 ref_msg_id = 1;        // optional app-level ACK tieback
+  string note = 2;
+}
+
+enum SemType {
+  SEM_UNKNOWN = 0;
+  SEM_COMMAND = 1;
+  SEM_STATUS  = 2;
+  SEM_ALERT   = 3;
+  SEM_ACK     = 4;
+}
+
+message Envelope {
+  uint32 version = 1;           // schema version of Envelope
+  SemType type   = 2;
+  bytes payload  = 3;           // serialized Command/Status/Alert/Ack
+}
+

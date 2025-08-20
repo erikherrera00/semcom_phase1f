@@ -1,0 +1,7 @@
+{"event":"start_sender","profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"bind":9000,"peer":9001,"ts":1755592259.469654}
+{"event":"ecdh_hello_send","ts":1755592259.4724321}
+{"event":"ecdh_ok","ts":1755592259.533354}
+{"event":"tx_part","msg_id":2265810840,"part_id":0,"total":1,"ct_len":29,"ts":1755592259.533538}
+{"event":"tx_ack","part_id":0,"ts":1755592259.547549}
+{"event":"tx_telem_sent","lost":0,"dup_used":0,"interleave":12,"ts":1755592259.547633}
+{"event":"stop_sender","ts":1755592259.734646}

@@ -1,0 +1,11 @@
+{
+  "n": 24,
+  "k": 18,
+  "interleave": 4,
+  "dup": 1,
+  "max_part": 192,
+  "priority": "normal",
+  "beacons": true,
+  "beacon_ms": 400
+}
+

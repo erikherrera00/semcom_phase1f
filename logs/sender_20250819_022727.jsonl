@@ -1,0 +1,13 @@
+{"event":"start_sender","profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"bind":9000,"peer":9001,"ts":1755595647.536926}
+{"event":"ecdh_hello_send","ts":1755595647.5399108}
+{"event":"ecdh_hello_retry","attempt":1,"ts":1755595648.143404}
+{"event":"ecdh_hello_retry","attempt":2,"ts":1755595648.747361}
+{"event":"ecdh_hello_retry","attempt":3,"ts":1755595649.351098}
+{"event":"ecdh_hello_retry","attempt":4,"ts":1755595649.954914}
+{"event":"ecdh_hello_retry","attempt":5,"ts":1755595650.5585642}
+{"event":"ecdh_hello_retry","attempt":6,"ts":1755595651.162264}
+{"event":"ecdh_hello_retry","attempt":7,"ts":1755595651.76612}
+{"event":"ecdh_hello_retry","attempt":8,"ts":1755595652.3700218}
+{"event":"ecdh_hello_retry","attempt":9,"ts":1755595652.9737852}
+{"event":"ecdh_hello_retry","attempt":10,"ts":1755595653.577562}
+{"event":"ecdh_fail","reason":"no_hs_ack","ts":1755595653.5778282}

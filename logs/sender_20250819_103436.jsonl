@@ -1,0 +1,13 @@
+{"event":"start_sender","bind":9000,"peer":9001,"profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"ts":1755624876.634222}
+{"event":"ecdh_hello_send","ts":1755624876.636945}
+{"event":"ecdh_hello_retry","attempt":1,"ts":1755624877.2404978}
+{"event":"ecdh_hello_retry","attempt":2,"ts":1755624877.8443189}
+{"event":"ecdh_hello_retry","attempt":3,"ts":1755624878.448117}
+{"event":"ecdh_hello_retry","attempt":4,"ts":1755624879.051904}
+{"event":"ecdh_hello_retry","attempt":5,"ts":1755624879.6557188}
+{"event":"ecdh_hello_retry","attempt":6,"ts":1755624880.259457}
+{"event":"ecdh_hello_retry","attempt":7,"ts":1755624880.863112}
+{"event":"ecdh_hello_retry","attempt":8,"ts":1755624881.4656372}
+{"event":"ecdh_hello_retry","attempt":9,"ts":1755624882.069417}
+{"event":"ecdh_hello_retry","attempt":10,"ts":1755624882.673204}
+{"event":"ecdh_fail","ts":1755624882.67346}

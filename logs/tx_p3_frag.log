@@ -1,0 +1,19 @@
+[TX] Sending ECDH HELLO...
+[TX] ECDH session established.
+[TX] part 1/8 bytes=256 ct_len=272
+[TX] got ACK for part 0
+[TX] part 2/8 bytes=256 ct_len=272
+[TX] got ACK for part 1
+[TX] part 3/8 bytes=256 ct_len=272
+[TX] got ACK for part 2
+[TX] part 4/8 bytes=256 ct_len=272
+[TX] got ACK for part 3
+[TX] part 5/8 bytes=256 ct_len=272
+[TX] got ACK for part 4
+[TX] part 6/8 bytes=256 ct_len=272
+[TX] got ACK for part 5
+[TX] part 7/8 bytes=256 ct_len=272
+[TX] got ACK for part 6
+[TX] part 8/8 bytes=18 ct_len=34
+[TX] got ACK for part 7
+TX done.

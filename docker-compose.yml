@@ -1,0 +1,50 @@
+services:
+  rx:
+    build: .
+    image: semcomms:0.5
+    container_name: rx
+    command: ["python","-u","securecomms.py",
+              "--role","recv","--ecdh","--session_id","7",
+              "--profile","heavy",
+              "--bind_host","0.0.0.0","--bind_port","9001",
+              "--peer_host","tx_status","--peer_port","9000",
+              "--ready_file","/app/logs/RX_READY",
+              "--enforce_signed","--pubkey","/app/keys/ed25519_pub.pem"]
+    networks: ["semnet"]
+    volumes:
+      - ./logs:/app/logs
+      - ./keys:/app/keys:ro
+      - ./profiles:/app/profiles:ro
+      - ./scenarios:/app/scenarios:ro
+    ports: ["9001:9001/udp"]
+    healthcheck:
+      test: ["CMD-SHELL","test -f /app/logs/RX_READY"]
+      interval: 1s
+      timeout: 1s
+      retries: 15
+      start_period: 1s
+
+  tx_status:
+    build: .
+    image: semcomms:0.5
+    container_name: tx_status
+    depends_on:
+      rx:
+        condition: service_healthy
+    command: ["python","-u","securecomms.py",
+              "--role","send","--ecdh","--session_id","7",
+              "--profile","heavy",
+              "--bind_host","0.0.0.0","--bind_port","9000",
+              "--peer_host","rx","--peer_port","9001",
+              "--semantic","status","--sem_json","/app/scenarios/status.json"]
+    networks: ["semnet"]
+    volumes:
+      - ./logs:/app/logs
+      - ./profiles:/app/profiles:ro
+      - ./scenarios:/app/scenarios:ro
+    ports: ["9000:9000/udp"]
+
+networks:
+  semnet:
+    driver: bridge
+

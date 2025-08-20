@@ -1,0 +1,5 @@
+{"event":"start_receiver","profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"bind":9001,"peer":9000,"ts":1755593555.5305731}
+{"event":"ecdh_ok","ts":1755593565.770574}
+{"event":"rx_ack","msg_id":918661732,"part_id":0,"ts":1755593565.771013}
+{"event":"rx_complete","bytes":13,"ts":1755593565.7710478}
+{"event":"stop_receiver","ts":1755593565.771063}

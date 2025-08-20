@@ -1,0 +1,6 @@
+{
+  "level": "CRITICAL",
+  "source": "uav-12",
+  "detail": "GPS spoofing detected; switching to INS fallback"
+}
+

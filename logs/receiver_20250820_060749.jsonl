@@ -1,0 +1,1 @@
+{"event":"start_receiver","bind":9001,"peer":9000,"profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"ts":1755670069.055421}

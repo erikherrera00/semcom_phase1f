@@ -1,0 +1,2 @@
+profile,loss,n,k,interleave,dup,batch,success_rate,avg_unique,avg_kept,avg_dup_supp
+heavy,0.2,30,20,12,2,1000,100.00,28.13,47.63,19.50

@@ -1,0 +1,13 @@
+{"event":"start_receiver","profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"bind":9001,"peer":9000,"ts":1755592554.920683}
+{"event":"ecdh_ok","ts":1755592579.009523}
+{"event":"rx_ack","msg_id":1973095337,"part_id":0,"ts":1755592579.009838}
+{"event":"rx_ack","msg_id":1973095337,"part_id":1,"ts":1755592579.00999}
+{"event":"rx_ack","msg_id":1973095337,"part_id":2,"ts":1755592579.01012}
+{"event":"rx_ack","msg_id":1973095337,"part_id":3,"ts":1755592579.0102558}
+{"event":"rx_ack","msg_id":1973095337,"part_id":4,"ts":1755592579.01038}
+{"event":"rx_ack","msg_id":1973095337,"part_id":5,"ts":1755592579.010505}
+{"event":"rx_ack","msg_id":1973095337,"part_id":6,"ts":1755592579.0106292}
+{"event":"rx_ack","msg_id":1973095337,"part_id":7,"ts":1755592579.010756}
+{"event":"rx_complete","bytes":1810,"ts":1755592579.010775}
+{"event":"rx_telem","ok":true,"lost":0,"repaired":0,"dup_used":0,"interleave":12,"ts":1755592579.010916}
+{"event":"stop_receiver","ts":1755592598.110243}

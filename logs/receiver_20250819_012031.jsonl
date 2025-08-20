@@ -1,0 +1,6 @@
+{"event":"start_receiver","profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"bind":9001,"peer":9000,"ts":1755591631.9926028}
+{"event":"ecdh_ok","ts":1755591637.5996292}
+{"event":"rx_ack","msg_id":1024827705,"part_id":0,"ts":1755591637.599835}
+{"event":"rx_complete","bytes":29,"ts":1755591637.599861}
+{"event":"rx_telem","ok":true,"lost":0,"repaired":0,"dup_used":0,"interleave":12,"ts":1755591637.599961}
+{"event":"stop_receiver","ts":1755591685.851823}

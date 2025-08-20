@@ -1,0 +1,10 @@
+protobuf==5.27.2
+grpcio-tools==1.66.1
+cryptography>=42.0.0
+zfec
+matplotlib
+dash
+flake8
+pytest
+mypy
+

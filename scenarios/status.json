@@ -1,0 +1,7 @@
+{
+  "system": "uav-12",
+  "health": 92,
+  "metrics": {"cpu":"43","temp":"59C","link":"heavy"}
+}
+
+

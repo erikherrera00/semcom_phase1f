@@ -1,0 +1,12 @@
+{"event":"start_receiver","profile":{"n":30,"k":20,"interleave":12,"dup":2,"max_part":256,"priority":"critical","beacons":true,"beacon_ms":200},"bind":9001,"peer":9000,"ts":1755593384.0301561}
+{"event":"ecdh_ok","ts":1755593388.973095}
+{"event":"rx_ack","msg_id":270257183,"part_id":0,"ts":1755593388.973563}
+{"event":"rx_ack","msg_id":270257183,"part_id":1,"ts":1755593388.973685}
+{"event":"rx_ack","msg_id":270257183,"part_id":2,"ts":1755593388.973792}
+{"event":"rx_ack","msg_id":270257183,"part_id":3,"ts":1755593388.973898}
+{"event":"rx_ack","msg_id":270257183,"part_id":4,"ts":1755593388.974006}
+{"event":"rx_ack","msg_id":270257183,"part_id":5,"ts":1755593388.974113}
+{"event":"rx_ack","msg_id":270257183,"part_id":6,"ts":1755593388.974219}
+{"event":"rx_ack","msg_id":270257183,"part_id":7,"ts":1755593388.974325}
+{"event":"rx_complete","bytes":1810,"ts":1755593388.974349}
+{"event":"stop_receiver","ts":1755593388.974358}

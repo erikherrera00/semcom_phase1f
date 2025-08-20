@@ -1,0 +1,2 @@
+profile,loss,n,k,interleave,dup,batch,success_rate,avg_unique,avg_kept,avg_dup_supp,mode,priority,max_part,beacons,beacon_sent,telemetry_from_session
+medium,0.1,26,20,6,1,1000,99.60,23.80,23.80,0.00,none,normal,1000000000,False,0,False
