@@ -4,7 +4,9 @@ cryptography>=42.0.0
 zfec
 matplotlib
 dash
+cat > requirements-dev.txt <<'REQ'
 flake8
 pytest
 mypy
+REQ
 

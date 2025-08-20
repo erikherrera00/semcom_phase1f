@@ -1,0 +1,6 @@
+# runtime pins live in requirements.txt
+# dev/testing/linting live here
+flake8
+pytest
+mypy
+
