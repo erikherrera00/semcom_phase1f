@@ -1,13 +1,7 @@
-# runtime
 protobuf==5.27.2
 grpcio-tools==1.66.1
 cryptography>=42.0.0
 zfec
 dash
 matplotlib
-cat > requirements-dev.txt <<'REQ'
-flake8
-pytest
-mypy
-REQ
 

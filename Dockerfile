@@ -3,30 +3,36 @@ FROM python:3.11-slim
 ENV PIP_NO_CACHE_DIR=1 \
     DEBIAN_FRONTEND=noninteractive
 
-# OS deps needed for building wheels & for matplotlib / cryptography / zfec
+# OS deps for building wheels & common libs used by our deps
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential gcc g++ make \
+    python3-dev \
     protobuf-compiler \
     libffi-dev libssl-dev \
     libfreetype6-dev libpng-dev \
+    pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-# First copy only requirements for better layer caching
+# Copy requirements first for better layer caching
 COPY requirements.txt requirements-dev.txt ./
 
-# Upgrade pip tooling; then install runtime + (optionally) dev deps
-RUN python -m pip install --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir -r requirements.txt \
-    && pip install --no-cache-dir -r requirements-dev.txt
+# Upgrade pip toolchain
+RUN python -m pip install --upgrade pip setuptools wheel
 
-# Now copy the source code
+# Install runtime deps (keep separate so failures are clear)
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install dev/test tools (flake8, pytest, mypy)
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# Copy the rest of the source
 COPY . .
 
 # Generate protobufs
 RUN python -m grpc_tools.protoc -I proto --python_out=. proto/semantic.proto
 
-# Default (can be overridden by docker run/compose)
-CMD ["python","-u","securecomms.py","--help"]
+# Default command (overridden by compose)
+CMD ["python", "-u", "securecomms.py", "--help"]
 
